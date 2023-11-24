@@ -1,0 +1,18 @@
+<!-- rounded_corner.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo redondeado -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Color de fondo -->
+            <corners android:radius="16dp" /> <!-- Radio de esquinas -->
+        </shape>
+    </item>
+
+    <!-- Efecto de elevación -->
+    <item android:right="0dp" android:top="0dp">
+        <shape>
+            <solid android:color="#80FFFFFF" /> <!-- Color de sombra -->
+            <corners android:radius="16dp" /> <!-- Radio de esquinas -->
+        </shape>
+    </item>
+</layer-list>

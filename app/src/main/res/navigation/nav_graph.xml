@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.memorise.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_editNoteFragment2"
+            app:destination="@id/editNoteFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_noteFragment2"
+            app:destination="@id/noteFragment2" />
+        <argument
+            android:name="home"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="homeF" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment2"
+        android:name="com.example.memorise.fragments.EditNoteFragment"
+        android:label="fragment_edit_note"
+        tools:layout="@layout/fragment_edit_note" >
+        <argument
+            android:name="note"
+            app:argType="com.example.memorise.model.Note"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_editNoteFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment2"
+        android:name="com.example.memorise.fragments.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+</navigation>
